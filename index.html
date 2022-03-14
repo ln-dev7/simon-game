@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <span>Score : {{ score }} pt(s)</span>
+        <div class="cards">
+            <div class="card" @click="selectSquare" :class="{ blue : hautGauche }"></div>
+            <div class="card" @click="selectSquare('hautDroit')" :class="{ red : hautDroit }"></div>
+            <div class="card" @click="selectSquare('basGauche')" :class="{ green : basGauche }"></div>
+            <div class="card" @click="selectSquare('basDroit')" :class="{ yellow : basDroit }"></div>
+        </div>
+        <button @click="newGame">Nouvelle partie</button>
+    </div>
+</body>
+
+</html>
